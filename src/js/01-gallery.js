@@ -1,9 +1,12 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
-import SimpleLightbox from 'simplelightbox';
 
 console.log(galleryItems);
+
 const imagesContainer = document.querySelector('.gallery');
 const imagesMarkup = galleryItems
   .map(
@@ -18,6 +21,6 @@ imagesContainer.insertAdjacentHTML('beforeend', imagesMarkup);
 
 new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
-  captionDelay: 250,
+  captionDelay: 500,
   captionPosition: 'bottom',
 });
